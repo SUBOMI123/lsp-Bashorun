@@ -8,7 +8,7 @@ public class Driver {
     // Driver method
     public static void main(String[] args) {
 
-        // Create calculate object
+        // Create combination object
         Combinations comb = new Combinations();
         // Stores the answer
         ArrayList<ArrayList<Integer>> answer = new ArrayList<ArrayList<Integer>>();
@@ -48,9 +48,9 @@ public class Driver {
         System.out.println("Combinations: ");
         comb.printSets(answer);
         
-     // Declare array 3
+     // Declare array 4
         int arr4[] = {2,2,2};
-        int target4 = 5;    // Assign target sum
+        int target4 = 5;    // Assign sum
         answer.clear();     // Clear answer
 
         // Find the sets and store them in the answer
