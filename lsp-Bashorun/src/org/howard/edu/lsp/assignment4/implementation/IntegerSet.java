@@ -1,6 +1,7 @@
 package org.howard.edu.lsp.assignment4.implementation;
 
 import java.util.ArrayList;
+import java.util.Collections;
 /**
  * 
  * @author sucrepapitoo
@@ -66,41 +67,31 @@ public class IntegerSet {
   * @throws IntegerSetException if set is empty
   */
  public int largest() throws IntegerSetException {
-     if (this.isEmpty()) {
-         throw new IntegerSetException("Set is empty!");
-     }
-     
-     int largest = this.set.get(0);
-     
-     for (int i = 1; i < this.length(); i++) {
-         if (this.set.get(i) > largest) {
-             largest = this.set.get(i);
-         }
-     }
-     
-     return largest;
- }
+	  if (set.size() == 0) {
+	    throw new IntegerSetException("Set is empty!");
+	  }
+	  else{
+	    return Collections.max(set);
+	  }
+	
+	}; 
  
  /**
   * @return the smallest item in the set
   * @throws IntegerSetException if set is empty
   */
  
- public int smallest() throws IntegerSetException {
-     if (this.isEmpty()) {
-         throw new IntegerSetException("Set is empty!");
-     }
-     
-     int smallest = this.set.get(0);
-     
-     for (int i = 1; i < this.length(); i++) {
-         if (this.set.get(i) < smallest) {
-             smallest = this.set.get(i);
-         }
-     }
-     
-     return smallest;
- }
+ public int smallest() throws IntegerSetException{
+	  if (set.size() == 0)
+	  {
+	    throw new IntegerSetException("Set is empty!");
+	  }
+	  else
+	  {
+	    return Collections.min(set);
+	    
+	  }
+	}
  
  /**
   * @param item, the item to be added to the set

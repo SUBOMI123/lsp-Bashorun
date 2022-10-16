@@ -14,13 +14,13 @@ public class Driver {
 
     System.out.println("Value of Set1 is:" + set1.toString());
     try {
-		System.out.println("Smallest value in Set1 is:" + set1.smallest());
+		System.out.println("Smallest value in Set1 is: " + set1.smallest());
 	} catch (IntegerSetException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
     try {
-		System.out.println("Largest value in Set1 is:" + set1.largest());
+		System.out.println("Largest value in Set1 is: " + set1.largest());
 	} catch (IntegerSetException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -31,8 +31,8 @@ public class Driver {
     set2.add(5);
     
     System.out.println("\nUnion of Set1 and Set2");
-    System.out.println("Value of Set1 is:" + set1);
-    System.out.println("Value of Set2 is:" + set2);
+    System.out.println("Value of Set1 is: " + set1);
+    System.out.println("Value of Set2 is: " + set2);
     
     set1.union(set2);
         
