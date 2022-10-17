@@ -43,6 +43,7 @@ public class IntegerSet {
   * @param b, the value being checked if sets are equal or not
   * @return true if 2 sets are equal, false otherwise
   */
+ 
  public boolean equals(IntegerSet b) {
      return this.set.equals(b.getSet());
  }
@@ -114,8 +115,11 @@ public class IntegerSet {
      }
      
      if (this.contains(item)) {
-         this.set.remove(item);
+    	 int index = this.set.indexOf(item);
+         this.set.remove(index);
+         
      }
+     
  }
  
  /**
@@ -143,7 +147,8 @@ public class IntegerSet {
  public void diff(IntegerSet intSetb) {
      for (int item : intSetb.getSet()) {
          if (this.contains(item)) {
-             this.set.remove(item);
+        	 int index = this.set.indexOf(item);
+             this.set.remove(index);
          }
      }
  }
@@ -160,4 +165,6 @@ public class IntegerSet {
      
      return returnStr;
  }
+
+
 }

@@ -31,8 +31,8 @@ public class Driver {
     set2.add(5);
     
     System.out.println("\nUnion of Set1 and Set2");
-    System.out.println("Value of Set1 is: " + set1);
-    System.out.println("Value of Set2 is: " + set2);
+    System.out.println("Value of Set1 is:" + set1);
+    System.out.println("Value of Set2 is:" + set2);
     
     set1.union(set2);
         
