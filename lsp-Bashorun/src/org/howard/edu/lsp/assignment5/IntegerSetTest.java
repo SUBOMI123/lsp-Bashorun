@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class IntegerSetTest {
 	@Test
+	@DisplayName ("IntergerSet.isEmpty test cases")
 	public void testisEmpty() {
 	       IntegerSet Set1 = new IntegerSet();
 	       assertTrue(Set1.isEmpty());
@@ -15,6 +16,7 @@ public class IntegerSetTest {
 	}
 	
 	@Test
+	@DisplayName ("IntergerSet.clear test cases")
 	public void testClear() {
 		IntegerSet set = new IntegerSet();
 		set.clear();
@@ -22,12 +24,14 @@ public class IntegerSetTest {
 	}
 	
 	@Test
+	@DisplayName ("IntergerSet.length test cases")
 	public void testLength() {
 		IntegerSet set = new IntegerSet();
 		assertEquals(0, set.length());
 	}
 	
 	@Test
+	@DisplayName ("IntergerSet.equals test cases")
 	public void testEqualsIntegerSet() {
 		// two sets having same elements
 		IntegerSet set1 = new IntegerSet();
@@ -68,6 +72,7 @@ public class IntegerSetTest {
 	}
 	
 	@Test
+	@DisplayName ("IntergerSet.contains test cases")
 	public void testContains() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(1);
@@ -84,6 +89,7 @@ public class IntegerSetTest {
 		}
 	
 	@Test
+	@DisplayName ("IntergerSet.largest test cases")
 	public void testLargest() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(10);
@@ -99,6 +105,7 @@ public class IntegerSetTest {
 		assertEquals(30, res);
 		}
 	@Test
+	@DisplayName ("IntergerSet.mallest test cases")
 	public void testLargest2() {
 		// when set is empty
 		IntegerSet set1 = new IntegerSet();
@@ -111,6 +118,7 @@ public class IntegerSetTest {
 		}
 	
 	@Test
+	@DisplayName ("IntergerSet.add test cases")
 	public void testSmallest() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(10);
@@ -128,6 +136,7 @@ public class IntegerSetTest {
 
 	
 	@Test
+	@DisplayName ("IntergerSet.Remove test cases")
 	public void testAdd() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(10);
@@ -147,6 +156,7 @@ public class IntegerSetTest {
 		}
 
 	@Test
+	@DisplayName ("IntergerSet.Remove test cases")
 	public void testRemove() throws IntegerSetException {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(10);
@@ -156,9 +166,14 @@ public class IntegerSetTest {
 		set1.remove(20);
 				
 		assertEquals(" 10 30 ", set1.toString());
+		
+		set1.remove(30);
+		assertEquals(" 10 ", set1.toString());
 	}
 
+
 	@Test
+	@DisplayName ("IntergerSet.Union test cases")
 	public void testUnion() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(1);
@@ -177,6 +192,7 @@ public class IntegerSetTest {
 	}
 	
 	@Test
+	@DisplayName ("IntergerSet.Intersect test cases")
 	public void testIntersect() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(1);
@@ -195,6 +211,7 @@ public class IntegerSetTest {
 	}
 	
 	 @Test
+	 @DisplayName ("IntergerSet.Diff test cases")
 	 public void testDiff() {
 		 IntegerSet set1 = new IntegerSet();
 			set1.add(1);
@@ -216,6 +233,7 @@ public class IntegerSetTest {
 
 
 	@Test
+	@DisplayName ("IntergerSet.ToString test cases")
 	public void testToString() {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(10);
