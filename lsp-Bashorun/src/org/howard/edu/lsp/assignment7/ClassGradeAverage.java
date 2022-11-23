@@ -19,17 +19,14 @@ class ClassGradeAverage implements AverageStrategy {
             if(grades == null || grades.size() < 1) {
                     throw new EmptyListException();
             }
-
-            int counter = 0;
             int sum = 0;
             int res = 0;
             int n = grades.size();
             Collections.sort(grades);
             for(int i=0; i<n; i++) {
                     sum += grades.get(i);
-                    counter++;
             }
-            res = sum/counter;
+            res = sum/n;
             return res;
     }
 }
